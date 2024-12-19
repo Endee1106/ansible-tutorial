@@ -1,0 +1,12 @@
+---
+  - name: My first playbook
+    hosts: myhosts
+    become: yes
+    vars:
+      - var1: Hello World
+    tasks:
+      - name: template file
+        template:
+          src : template.j2
+          dest: /tmp/result.txt
+
